@@ -5,6 +5,7 @@ Created on Sep 2, 2011
 '''
 
 class Task(object):
-
-    def __init__(self, commands):
-        self.commands = commands
+        
+    def doTask(self):
+        print "task"
+        return True

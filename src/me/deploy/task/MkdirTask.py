@@ -7,10 +7,11 @@ from me.deploy.task.Task import Task
 
 class MkdirTask(Task):
     
+    MK_DIR_COMMAND = 'mkdir'
+    
     def __init__(self, dir_path, commands):
-        Task.__init__(self, commands)
         self.dir_path = dir_path
         self.commands = commands
         
     def doTask(self):
-        self.commands.mk_dir('mkdir ' + self.dir_path)
+        return self.commands.mk_dir('/tmp/test_folder')
