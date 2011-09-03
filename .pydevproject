@@ -9,8 +9,8 @@
 <value>src/deploy_me/manage.py</value>
 </pydev_variables_property>
 <pydev_pathproperty name="org.python.pydev.PROJECT_SOURCE_PATH">
-<path>/deploy.me/src</path>
-<path>/deploy.me/test</path>
+<path>/deploy_me/src</path>
+<path>/deploy_me/test</path>
 </pydev_pathproperty>
 <pydev_pathproperty name="org.python.pydev.PROJECT_EXTERNAL_SOURCE_PATH">
 <path>/Library/Python/2.6/site-packages/Behaviour-0.1a4-py2.6.egg/src/behaviourplugin.pyc</path>

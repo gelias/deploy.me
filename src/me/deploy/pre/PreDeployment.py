@@ -4,12 +4,12 @@ class PreDeployment(object):
         self.app_name = app_name
         self.commands = commands
 
-    def doDownloadOfAppToDeployment(self):
+    def doDownloadAppToDeployment(self):
         download_result = self.commands.download_app(self.app_name)
         return download_result
 
     
-    def buildFoldersOnServersToUploadAppFile(self):
+    def buildFoldersOnDeploymentServersBeforeDownloadApp(self):
         folders_built_result = self.commands.build_folders_on_servers()
         return folders_built_result
 
@@ -20,11 +20,11 @@ class PreDeployment(object):
 
     
     def start(self):
-        download_result = self.doDownloadOfAppToDeployment()
-        build_folders_result = self.buildFoldersOnServersToUploadAppFile()
+        download_result = self.doDownloadAppToDeployment()
+        build_folders_result = self.buildFoldersOnDeploymentServersBeforeDownloadApp()
         upload_app_result = self.uploadAppFileToTheServers()
         
-        return download_result == build_folders_result == upload_app_result
+        return ((download_result == build_folders_result) == upload_app_result)
     
     
     
